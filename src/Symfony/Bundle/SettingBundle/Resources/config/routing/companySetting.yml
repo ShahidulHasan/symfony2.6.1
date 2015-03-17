@@ -1,0 +1,13 @@
+company_homepage:
+    pattern: /
+    defaults: { _controller: SymfonySettingBundle:CompanySetting:index }
+
+company_add:
+    pattern: /add
+    defaults: { _controller: SymfonySettingBundle:CompanySetting:add }
+
+company_update:
+    pattern: /edit/{id}
+    defaults: { _controller: SymfonySettingBundle:CompanySetting:edit }
+    requirements:
+          id:  \d+

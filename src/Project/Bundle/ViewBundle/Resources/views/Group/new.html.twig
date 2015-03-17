@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} : Group Add {% endblock %}
+
+{% block body %}
+
+    <!-- BEGIN PAGE HEAD -->
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1> Groups
+                <small></small>
+            </h1>
+        </div>
+        <!-- END PAGE TITLE -->
+    </div>
+    <!-- END PAGE HEAD -->
+
+    {{ include('ProjectViewBundle:Message:flash-message.html.twig') }}
+
+    <!-- BEGIN PAGE CONTENT INNER -->
+    <div class="row">
+        <div class="col-md-12">
+
+            {{ form_start(form, {'method': 'POST', 'attr': {'id': 'form-group-add', 'class': 'form-horizontal'}}) }}
+
+            <div class="alert alert-error {% if not form.vars.errors|length %} hide {% endif %}">
+                <button class="close" data-dismiss="alert"></button>
+                You have some form errors. Please check below.
+                {{ form_errors(form) }}
+            </div>
+            <div class="portlet box green">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-users"></i>Group Form
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                        <div class="form-body">
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"> Name</label>
+                                <div class="col-md-6">
+                                    <div class="input-icon right">
+                                        <span class="input-group-btn"></span>
+                                        {{ form_widget(form.name, {'attr': {'class': 'form-control span5', 'data-required': '1' } } ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Description</label>
+                                <div class="col-md-6">
+                                    <div class="input-icon right">
+                                        <span class="input-group-btn"></span>
+                                        {{ form_widget(form.description, {'attr': {'class': 'form-control span5'} } ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group last">
+                                <label class="control-label col-md-3">Grouped Options</label>
+                                <div class="col-md-6">
+                                    <div class="input-icon right">
+                                        <span class="input-group-btn"></span>
+                                        {{ form_widget(form.roles, {'attr': {'class': 'form-control span5'} } ) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    {{ form_widget(form.submit, {'attr': {'class': 'btn green'}}) }}
+                                    <button type="button" class="btn default">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END FORM-->
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT INNER -->
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    {% stylesheets filter='cssrewrite'
+    'assets/global/css/components.css'
+
+    'assets/global/plugins/bootstrap-select/bootstrap-select.min.css'
+    'assets/global/plugins/select2/select2.css'
+    'assets/global/plugins/jquery-multi-select/css/multi-select.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    <!-- END PAGE LEVEL STYLES -->
+
+    <style>
+        .ms-container{
+            width: 471px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    {% javascripts
+    'assets/global/plugins/bootstrap-select/bootstrap-select.min.js'
+    'assets/global/plugins/select2/select2.min.js'
+    'assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js'
+    'assets/admin/layout/scripts/quick-sidebar.js'
+    'assets/admin/pages/scripts/components-dropdowns.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock javascripts %}
+
+{% block documentready %}
+
+    Metronic.init(); // init metronic core components
+    Layout.init(); // init current layout
+    QuickSidebar.init(); // init quick sidebar
+    Demo.init(); // init demo features
+    ComponentsDropdowns.init();
+
+    $("select[multiple=multiple]").multiSelect({selectableOptgroup: true});
+
+{% endblock documentready %}
+

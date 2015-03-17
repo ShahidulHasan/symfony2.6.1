@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} : Core {% endblock %}
+
+{% block body %}
+
+    <!-- BEGIN PAGE HEAD -->
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>Core
+                <small></small>
+            </h1>
+        </div>
+        <!-- END PAGE TITLE -->
+    </div>
+    <!-- END PAGE HEAD -->
+
+    {{ include('ProjectViewBundle:Message:flash-message.html.twig') }}
+
+    <!-- BEGIN PAGE CONTENT INNER -->
+    <div class="row">
+
+        <!-- BEGIN PAGE -->
+
+
+
+        <!-- END PAGE -->
+
+    </div>
+    <!-- END PAGE CONTENT INNER -->
+
+{% endblock %}

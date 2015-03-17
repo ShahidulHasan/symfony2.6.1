@@ -1,0 +1,86 @@
+{% extends "::lock-layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}{{ parent() }} Lock {% endblock %}
+
+{% block fos_user_content %}
+
+    <!-- BEGIN LOGIN FORM -->
+
+    <div class="page-body">
+        <img class="page-lock-img" src="../../assets/admin/pages/media/profile/profile.jpg" alt="">
+        <div class="page-lock-info">
+            <h1>Bob Nilson</h1>
+        <span class="email">
+        bob@keenthemes.com </span>
+        <span class="locked">
+        Locked </span>
+            <form class="form-inline" action="{{ url('user_home') }}">
+                <div class="input-group input-medium">
+                    <input type="text" class="form-control" placeholder="Password">
+                <span class="input-group-btn">
+                <button type="submit" class="btn blue icn-only"><i class="m-icon-swapright m-icon-white"></i></button>
+                </span>
+                </div>
+                <!-- /input-group -->
+                <div class="relogin">
+                    <a href="login.html">
+                        Not Bob Nilson ? </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {#<form action="{{ path("fos_user_security_check") }}" method="post" class="login-form">#}
+        {#<input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>#}
+
+        {#<h3 class="form-title">Login to your account</h3>#}
+
+        {#<div class="form-group">#}
+            {#<label for="username"#}
+                   {#class="control-label visible-ie8 visible-ie9">{{ 'security.login.username'|trans }}</label>#}
+
+            {#<div class="input-icon">#}
+                {#<i class="fa fa-user"></i>#}
+                {#<input type="text" id="username" name="_username" value="{{ last_username }}" required="required"#}
+                       {#class="form-control placeholder-no-fix" style="padding-left: 30px !important;" autocomplete="off"#}
+                       {#placeholder="Username"/>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="form-group">#}
+            {#<label for="password"#}
+                   {#class="control-label visible-ie8 visible-ie9">{{ 'security.login.password'|trans }}</label>#}
+
+            {#<div class="input-icon">#}
+                {#<i class="fa fa-lock"></i>#}
+                {#<input type="password" id="password" name="_password" required="required"#}
+                       {#class="form-control placeholder-no-fix" style="padding-left: 30px !important;" autocomplete="off"#}
+                       {#placeholder="Password"/>#}
+            {#</div>#}
+        {#</div>#}
+
+        {#<div class="form-actions">#}
+            {#<input type="checkbox" id="remember_me" name="_remember_me" value="on"/>#}
+            {#<label for="remember_me" class="checkbox">{{ 'security.login.remember_me'|trans }}</label>#}
+
+            {#<button type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"#}
+                    {#class="btn blue pull-right">#}
+                {#Login <i class="m-icon-swapright m-icon-white"></i>#}
+            {#</button>#}
+        {#</div>#}
+
+        {#<div class="forget-password">#}
+            {#<h4>Forgot your password ?</h4>#}
+
+            {#<p>#}
+                {#<a href="javascript:;" id="forget-password">#}
+                    {#<i class="fa fa-forward"></i> Click here </a>#}
+                {#to reset your password.#}
+            {#</p>#}
+        {#</div>#}
+
+    {#</form>#}
+    <!-- END LOGIN FORM -->
+
+{% endblock fos_user_content %}

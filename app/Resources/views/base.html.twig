@@ -1,0 +1,145 @@
+<html>
+<!--[if IE 8]><html lang="en" class="ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}Symfony{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="Shahidul Hasan" name="author"/>
+
+    {% block stylesheets %}
+
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        {% stylesheets filter='cssrewrite'
+        'assets/global/plugins/font-awesome/css/font-awesome.min.css'
+        'assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
+        'assets/global/plugins/bootstrap/css/bootstrap.min.css'
+        'assets/global/plugins/uniform/css/uniform.default.css'
+        'assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'
+        'assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'
+        'assets/global/plugins/fullcalendar/fullcalendar.min.css'
+        'assets/global/plugins/jqvmap/jqvmap/jqvmap.css'
+        'assets/admin/pages/css/tasks.css'
+        'assets/global/css/components-rounded.css'
+        'assets/global/css/plugins.css'
+        'assets/admin/layout4/css/layout.css'
+        'assets/admin/layout4/css/themes/default.css'
+        'assets/admin/layout4/css/custom.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        <!-- END GLOBAL MANDATORY STYLES -->
+
+    {% endblock stylesheets %}
+
+    {% block jsrouting %}
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+    {% endblock jsrouting %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+</head>
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo ppage-sidebar-closed-hide-logo {{ app.request.locale }} {% block bodyClass %}{% endblock bodyClass %}">
+
+<!-- BEGIN HEADER -->
+{% block topNavigation %}
+    {{ include(':partials:header.html.twig', {'parameter': ''}) }}
+{% endblock %}
+<!-- END HEADER -->
+
+<div class="clearfix"></div>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    {% block sideNavigation %}
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            {{ knp_menu_render('ProjectViewBundle:MenuBuilder:mainMenu', {'ancestorClass': 'active', 'currentClass': 'active', 'template': 'ProjectViewBundle:Menu:knp_menu.html.twig'}) }}
+        </div>
+    </div>
+    {% endblock %}
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+{% block footer %}
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            2014 &copy; Metronic by keenthemes.
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+{% endblock footer %}
+
+{% block javascripts %}
+
+    <!-- BEGIN GLOBAL JS -->
+    {% javascripts
+    'assets/global/plugins/respond.min.js'
+    'assets/global/plugins/excanvas.min.js'
+
+    'assets/global/plugins/jquery.min.js'
+    'assets/global/plugins/jquery-migrate.min.js'
+    'assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js'
+    'assets/global/plugins/bootstrap/js/bootstrap.min.js'
+    'assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
+    'assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
+    'assets/global/plugins/jquery.blockui.min.js'
+    'assets/global/plugins/jquery.cokie.min.js'
+    'assets/global/plugins/uniform/jquery.uniform.min.js'
+    'assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'
+
+    'assets/global/plugins/morris/morris.min.js'
+    'assets/global/plugins/morris/raphael-min.js'
+    'assets/global/plugins/jquery.sparkline.min.js'
+
+    'assets/global/scripts/metronic.js'
+    'assets/admin/layout4/scripts/layout.js'
+    'assets/admin/layout4/scripts/demo.js'
+    'assets/admin/pages/scripts/index3.js'
+    'assets/admin/pages/scripts/tasks.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <!-- END GLOBAL JS -->
+
+{% endblock javascripts %}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        {% block documentready %}
+
+        Metronic.init(); // init metronic core componets
+        Layout.init(); // init layout
+        Demo.init(); // init demo features
+        Index.init(); // init index page
+        Tasks.initDashboardWidget(); // init tash dashboard widget
+
+        {% endblock documentready %}
+
+    });
+
+</script>
+
+</body>
+
+</html>

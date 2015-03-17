@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}Symfony{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="Shahidul Hasan" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    {% block stylesheets %}
+
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        {% stylesheets filter='cssrewrite'
+        'assets/global/plugins/font-awesome/css/font-awesome.min.css'
+        'assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
+        'assets/global/plugins/bootstrap/css/bootstrap.min.css'
+        'assets/global/plugins/uniform/css/uniform.default.css'
+
+        'assets/admin/pages/css/lock2.css'
+
+        'assets/global/css/components-rounded.css'
+        'assets/global/css/plugins.css'
+        'assets/admin/layout/css/layout.css'
+        'assets/admin/layout/css/themes/darkblue.css'
+        'assets/admin/layout/css/custom.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        <!-- END GLOBAL MANDATORY STYLES -->
+
+    {% endblock stylesheets %}
+
+<body class="login {{ app.request.locale }} {% block bodyClass %}{% endblock bodyClass %}">
+
+{% block logincontainer %}
+
+    <div class="page-lock">
+        <div class="page-logo">
+            <a class="brand" href="index.html">
+                <img src="../../assets/admin/layout3/img/logo-big.png" alt="logo"/>
+            </a>
+        </div>
+
+        {% block fos_user_content %}{% endblock fos_user_content %}
+
+        <div class="page-footer-custom">
+            2014 &copy; Metronic. Admin Dashboard Template.
+        </div>
+    </div>
+
+{% endblock logincontainer %}
+
+{% block javascripts %}
+
+    {% javascripts
+    'assets/global/plugins/respond.min.js'
+    'assets/global/plugins/excanvas.min.js'
+
+    'assets/global/plugins/jquery.min.js'
+    'assets/global/plugins/jquery-migrate.min.js'
+    'assets/global/plugins/bootstrap/js/bootstrap.min.js'
+    'assets/global/plugins/jquery.blockui.min.js'
+    'assets/global/plugins/uniform/jquery.uniform.min.js'
+    'assets/global/plugins/jquery.cokie.min.js'
+
+    'assets/global/plugins/backstretch/jquery.backstretch.min.js'
+
+    'assets/global/scripts/metronic.js'
+    'assets/admin/layout/scripts/layout.js'
+    'assets/admin/layout/scripts/demo.js'
+    'assets/admin/pages/scripts/lock.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock javascripts %}
+
+<script>
+    jQuery(document).ready(function () {
+
+        {% block documentready %}
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        Lock.init();
+        Demo.init();
+        {% endblock documentready %}
+    });
+</script>
+
+</body>
+
+</html>

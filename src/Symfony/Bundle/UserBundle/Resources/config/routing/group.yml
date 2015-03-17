@@ -1,0 +1,19 @@
+group_home:
+    pattern: /group
+    defaults: { _controller: SymfonyUserBundle:Group:index }
+
+group_details:
+    pattern: /group-details/{id}
+    defaults: { _controller: SymfonyUserBundle:Group:details }
+
+group_add:
+    pattern: /group-add
+    defaults: { _controller: SymfonyUserBundle:Group:add }
+
+group_edit:
+    pattern: /group-edit/{id}
+    defaults: { _controller: SymfonyUserBundle:Group:groupEdit }
+
+group_delete:
+    pattern: /group-delete/{id}
+    defaults: { _controller: SymfonyUserBundle:Group:groupDelete }

@@ -1,0 +1,24 @@
+parameters:
+    symfony.user.permission.security_provider.class: Symfony\Bundle\UserBundle\Permission\Provider\SecurityPermissionProvider
+    symfony.user.permission_builder.class: Symfony\Bundle\UserBundle\Permission\PermissionBuilder
+
+services:
+    symfony_user.registration.form.type:
+        class: Symfony\Bundle\UserBundle\Form\UserFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: symfony_userbundle_user }
+
+    symfony.user.permission.security_provider:
+        class: %symfony.user.permission.security_provider.class%
+        tags:
+            - { name: symfony.user.permission_provider, alias: user }
+
+    symfony.user.permission_builder:
+        class: %symfony.user.permission_builder.class%
+
+    symfony_user.group.form.type:
+        class: Symfony\Bundle\UserBundle\Form\GroupFormType
+        arguments: [%fos_user.model.group.class%, @symfony.user.permission_builder]
+        tags:
+            - { name: form.type, alias: fos_user_group }

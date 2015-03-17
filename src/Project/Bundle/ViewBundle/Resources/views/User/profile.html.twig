@@ -1,0 +1,891 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} : Profile {% endblock %}
+
+{% block body %}
+
+    <!-- BEGIN PAGE HEAD -->
+    <div class="page-head">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>Profile
+                <small></small>
+            </h1>
+        </div>
+        <!-- END PAGE TITLE -->
+    </div>
+    <!-- END PAGE HEAD -->
+
+    {{ include('ProjectViewBundle:Message:flash-message.html.twig') }}
+
+    <!-- BEGIN PAGE CONTENT INNER -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN PROFILE SIDEBAR -->
+            <div class="profile-sidebar">
+                <!-- PORTLET MAIN -->
+                <div class="portlet light profile-sidebar-portlet">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <img src="../../assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                    </div>
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name">
+                            Marcus Doe
+                        </div>
+                        <div class="profile-usertitle-job">
+                            Developer
+                        </div>
+                    </div>
+                    <!-- END SIDEBAR USER TITLE -->
+                    <!-- SIDEBAR BUTTONS -->
+                    <div class="profile-userbuttons">
+                        <button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
+                        <button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+                    </div>
+                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- SIDEBAR MENU -->
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="extra_profile.html">
+                                    <i class="icon-home"></i>
+                                    Overview </a>
+                            </li>
+                            <li>
+                                <a href="extra_profile_account.html">
+                                    <i class="icon-settings"></i>
+                                    Account Settings </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END MENU -->
+                </div>
+                <!-- END PORTLET MAIN -->
+            </div>
+            <!-- END BEGIN PROFILE SIDEBAR -->
+
+            <!-- BEGIN PROFILE CONTENT -->
+            <div class="profile-content">
+                <div class="row">
+                    <div class="col-md-6">
+                            <!-- BEGIN PORTLET -->
+                            <div class="portlet light">
+                                <div class="portlet-title">
+                                    <div class="caption caption-md">
+                                        <i class="icon-bar-chart theme-font hide"></i>
+                                        <span class="caption-subject font-blue-madison bold uppercase">Customer Support</span>
+                                        <span class="caption-helper">45 pending</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="scroller" style="height: 333px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                        <div class="general-item-list">
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar4.jpg">
+                                                        <a href="" class="item-name primary-link">Nick Larson</a>
+                                                        <span class="item-label">3 hrs ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-success"></span> Open</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar3.jpg">
+                                                        <a href="" class="item-name primary-link">Mark</a>
+                                                        <span class="item-label">5 hrs ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-warning"></span> Pending</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat tincidunt ut laoreet.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar6.jpg">
+                                                        <a href="" class="item-name primary-link">Nick Larson</a>
+                                                        <span class="item-label">8 hrs ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-primary"></span> Closed</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar7.jpg">
+                                                        <a href="" class="item-name primary-link">Nick Larson</a>
+                                                        <span class="item-label">12 hrs ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-danger"></span> Pending</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar9.jpg">
+                                                        <a href="" class="item-name primary-link">Richard Stone</a>
+                                                        <span class="item-label">2 days ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-danger"></span> Open</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ut laoreet dolore magna aliquam erat volutpat.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar8.jpg">
+                                                        <a href="" class="item-name primary-link">Dan</a>
+                                                        <span class="item-label">3 days ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-warning"></span> Pending</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-head">
+                                                    <div class="item-details">
+                                                        <img class="item-pic" src="../../assets/admin/layout3/img/avatar2.jpg">
+                                                        <a href="" class="item-name primary-link">Larry</a>
+                                                        <span class="item-label">4 hrs ago</span>
+                                                    </div>
+                                                    <span class="item-status"><span class="badge badge-empty badge-success"></span> Open</span>
+                                                </div>
+                                                <div class="item-body">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END PORTLET -->
+                        </div>
+                    <div class="col-md-6">
+                        <!-- BEGIN PORTLET -->
+                        <div class="portlet light">
+                            <div class="portlet-title tabbable-line">
+                                <div class="caption caption-md">
+                                    <i class="icon-globe theme-font hide"></i>
+                                    <span class="caption-subject font-blue-madison bold uppercase">Feeds</span>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_1_1" data-toggle="tab">
+                                            System </a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_1_2" data-toggle="tab">
+                                            Activities </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="portlet-body">
+                                <!--BEGIN TABS-->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_1_1">
+                                        <div class="scroller" style="height: 333px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                            <ul class="feeds">
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-success">
+                                                                    <i class="fa fa-bell-o"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    You have 4 pending tasks. <span class="label label-sm label-info">
+                                                                    Take action <i class="fa fa-share"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            Just now
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New version v1.4 just lunched!
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                20 mins
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-danger">
+                                                                    <i class="fa fa-bolt"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Database server #12 overloaded. Please fix the issue.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            24 mins
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New order received and pending for process.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            30 mins
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-success">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New payment refund and pending approval.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            40 mins
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-warning">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New member registered. Pending approval.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            1.5 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-success">
+                                                                    <i class="fa fa-bell-o"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Web server hardware needs to be upgraded. <span class="label label-sm label-default ">
+                                                                    Overdue </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            2 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-default">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Prod01 database server is overloaded 90%.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            3 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-warning">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New group created. Pending manager review.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            5 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Order payment failed.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            18 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-default">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New application received.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            21 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Dev90 web server restarted. Pending overall system check.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            22 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-default">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New member registered. Pending approval
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            21 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    L45 Network failure. Schedule maintenance.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            22 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-default">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Order canceled with failed payment.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            21 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Web-A2 clound instance created. Schedule full scan.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            22 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-default">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Member canceled. Schedule account review.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            21 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-info">
+                                                                    <i class="fa fa-bullhorn"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    New order received. Please take care of it.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            22 hours
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab_1_2">
+                                        <div class="scroller" style="height: 337px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                            <ul class="feeds">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New order received
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                10 mins
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="col1">
+                                                        <div class="cont">
+                                                            <div class="cont-col1">
+                                                                <div class="label label-sm label-danger">
+                                                                    <i class="fa fa-bolt"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont-col2">
+                                                                <div class="desc">
+                                                                    Order #24DOP4 has been rejected. <span class="label label-sm label-danger ">
+                                                                    Take action <i class="fa fa-share"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col2">
+                                                        <div class="date">
+                                                            24 mins
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="col1">
+                                                            <div class="cont">
+                                                                <div class="cont-col1">
+                                                                    <div class="label label-sm label-success">
+                                                                        <i class="fa fa-bell-o"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont-col2">
+                                                                    <div class="desc">
+                                                                        New user registered
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col2">
+                                                            <div class="date">
+                                                                Just now
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END TABS-->
+                            </div>
+                        </div>
+                        <!-- END PORTLET -->
+                    </div>
+                </div>
+            </div>
+            <!-- END PROFILE CONTENT -->
+
+        </div>
+    </div>
+    <!-- END PAGE CONTENT INNER -->
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    {% stylesheets filter='cssrewrite'
+    'assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css'
+    'assets/admin/pages/css/profile.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    <!-- END PAGE LEVEL STYLES -->
+
+    <style>
+        .profile-userpic img{
+            height: 25%;
+        }
+    </style>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    {% javascripts
+    'assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js'
+    'assets/global/plugins/jquery.sparkline.min.js'
+
+    'assets/admin/layout/scripts/quick-sidebar.js'
+    'assets/admin/pages/scripts/profile.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock javascripts %}
+
+{% block documentready %}
+
+    Metronic.init(); // init metronic core components
+    Layout.init(); // init current layout
+    QuickSidebar.init(); // init quick sidebar
+    Demo.init(); // init demo features
+    Profile.init(); // init page demo
+
+{% endblock documentready %}

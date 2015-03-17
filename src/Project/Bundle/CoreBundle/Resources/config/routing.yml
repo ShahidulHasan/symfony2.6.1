@@ -1,0 +1,5 @@
+ProjectCoreBundle_core:
+    resource: "@ProjectCoreBundle/Resources/config/routing/core.yml"
+
+ProjectCoreBundle_dashboard:
+    resource: "@ProjectCoreBundle/Resources/config/routing/dashboard.yml"

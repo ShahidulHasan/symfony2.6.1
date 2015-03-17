@@ -1,0 +1,23 @@
+{% block body %}
+
+<div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">Details</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Group : {{ group.name }}</p>
+            <p>Description : {{ group.description }}</p>
+            <p>Roles : </p>
+            {% for role in group.roles %}
+                {{ role }}<br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn default" data-dismiss="modal">Close</button>
+</div>
+
+{% endblock %}

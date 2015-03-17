@@ -1,0 +1,5 @@
+SymfonyUserBundle_user:
+    resource: "@SymfonyUserBundle/Resources/config/routing/user.yml"
+
+SymfonyUserBundle_group:
+    resource: "@SymfonyUserBundle/Resources/config/routing/group.yml"

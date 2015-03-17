@@ -1,0 +1,25 @@
+symfony_audit:
+    resource: "@SymfonyAuditBundle/Resources/config/routing.yml"
+    prefix:   /
+
+symfony_setting:
+    resource: "@SymfonySettingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+project_view:
+    resource: "@ProjectViewBundle/Resources/config/routing.yml"
+    prefix:   /
+
+project_core:
+    resource: "@ProjectCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+symfony_user:
+    resource: "@SymfonyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

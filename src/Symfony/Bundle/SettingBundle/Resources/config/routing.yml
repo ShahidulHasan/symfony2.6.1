@@ -1,0 +1,3 @@
+symfony_company_setting:
+    resource: "@SymfonySettingBundle/Resources/config/routing/companySetting.yml"
+    prefix:   /company

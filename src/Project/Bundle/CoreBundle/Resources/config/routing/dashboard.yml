@@ -1,0 +1,7 @@
+dashboard_home:
+    pattern: /
+    defaults: { _controller: ProjectCoreBundle:DashBoard:index }
+
+dashboard_dashboard:
+    pattern: /dashboard
+    defaults: { _controller: ProjectCoreBundle:DashBoard:index }

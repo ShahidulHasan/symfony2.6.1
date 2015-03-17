@@ -1,0 +1,39 @@
+user_home:
+    pattern: /user
+    defaults: { _controller: SymfonyUserBundle:User:index }
+
+user_details:
+    pattern: /user-details/{id}
+    defaults: { _controller: SymfonyUserBundle:User:details }
+
+user_add:
+    pattern: /user-add
+    defaults: { _controller: SymfonyUserBundle:User:add }
+
+user_edit:
+    pattern: /user-edit/{id}
+    defaults: { _controller: SymfonyUserBundle:User:edit }
+
+user_profile:
+    pattern: /profile
+    defaults: { _controller: SymfonyUserBundle:User:profile }
+
+user_task:
+    pattern: /task
+    defaults: { _controller: SymfonyUserBundle:User:task }
+
+user_profile_fos:
+    pattern: /profile/
+    defaults: { _controller: SymfonyUserBundle:User:profile }
+
+user_enabled:
+    pattern: /user-enabled/{id}
+    defaults: { _controller: SymfonyUserBundle:User:userEnabled }
+
+user_delete:
+    pattern: /user-delete/{id}
+    defaults: { _controller: SymfonyUserBundle:User:delete }
+
+user_lock:
+    pattern: /lock
+    defaults: { _controller: SymfonyUserBundle:User:lock }
