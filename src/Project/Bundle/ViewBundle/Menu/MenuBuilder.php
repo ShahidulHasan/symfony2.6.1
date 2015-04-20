@@ -37,9 +37,9 @@ class MenuBuilder extends ContainerAware
             ->addChild('Group', array('route' => 'group_home'))
             ->setAttribute('icon','icon-users');
 
-//        $menu
-//            ->addChild('Audit', array('route' => 'user_login_info'))
-//            ->setAttribute('icon','icon-users');
+        $menu
+            ->addChild('Audit', array('route' => 'audit_home'))
+            ->setAttribute('icon','icon-eye');
 
         return $menu;
     }
